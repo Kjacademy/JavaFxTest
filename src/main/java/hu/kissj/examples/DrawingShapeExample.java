@@ -1,8 +1,10 @@
 package hu.kissj.examples;
 
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.CubicCurve;
 import javafx.scene.shape.Ellipse;
@@ -96,6 +98,7 @@ public class DrawingShapeExample implements ExampleBuilder {
         final Shape donut = Path.subtract(bigCircle, smallCircle);
         donut.setStrokeWidth(1.8);
         donut.setStroke(Color.BLACK);
+        donut.addEventFilter(MouseEvent.MOUSE_CLICKED, e -> System.out.println("Donut is clicked"));
 // orange glaze
         donut.setFill(Color.rgb(255, 200, 0));
 // add drop shadow

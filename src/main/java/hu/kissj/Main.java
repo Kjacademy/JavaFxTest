@@ -4,6 +4,7 @@ import hu.kissj.examples.DrawingLinesExample;
 import hu.kissj.examples.DrawingShapeExample;
 import hu.kissj.examples.ExampleBuilder;
 import hu.kissj.examples.HelloWorldExample;
+import hu.kissj.examples.PaintingColorsExample;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -15,7 +16,8 @@ public class Main extends Application {
         final ExampleBuilder exampleBuilder =
                 //new HelloWorldExample();
                 //new DrawingLinesExample();
-                new DrawingShapeExample();
+                //new DrawingShapeExample();
+                new PaintingColorsExample();
 
         exampleBuilder.build(stage);
     }
