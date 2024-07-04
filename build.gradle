@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'hu.kissj'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "21"
+    modules = [ 'javafx.controls']
+}
+
+mainClassName = 'hu.kissj.Main'
+
+dependencies {
+  /*  implementation 'org.openjfx:javafx:21'
+
+    implementation 'org.openjfx:javafx-base:21'
+    implementation 'org.openjfx:javafx-graphics:21'
+    implementation 'org.openjfx:javafx-controls:21'
+    implementation 'org.openjfx:javafx-fxml:21'
+    implementation 'org.openjfx:javafx-swing:21'
+    implementation 'org.openjfx:javafx-media:21'
+    implementation 'org.openjfx:javafx-web:21' */
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+/*jar {
+    manifest {
+        attributes(
+                'Main-Class': 'hu.kissj.AppLauncher'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}*/
+
+test {
+    useJUnitPlatform()
+}
